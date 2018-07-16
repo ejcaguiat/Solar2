@@ -191,7 +191,6 @@ td.descrip {
     width: 1200px;
     height: 550px;
     color : #fff;
-    background-image: url(form_bg.jpg);
     background-size: cover;
     border-radius: 10px;
 }
@@ -240,17 +239,17 @@ textarea.form-control {
 .back-button:hover {
     color: black;
 }
-.logout-button {
+input[type=submit].logout-btn, .logout-button {
     background-color: white;
-    padding: 12px 20px;
+    padding: 8px 12px;
     color: black;
-    margin-top: 5px;
+    margin-top: 6px;
     margin-right: 20px;
     float: right;
     border-radius: 15px;
 }
-.logout-button:hover {
-    padding: 12px 18px;
+input[type=submit].logout-btn:hover, .logout-button:hover {
+    padding: 8px 10px;
     font-weight: bold;
     text-decoration: none;
 }
