@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +14,20 @@
 
 <body style="background-image: url({% static 'media/file_form.jpeg' %}); background-size: cover;">
     <div class="navbar" style="background-image: url({% static 'media/orange-bg.png' %});">
-        <a href="maps.html"><img src="{% static 'media/solarpic.png' %}" class="topnav-logo"></a>
-        <a href="login.html" class="logout-button">Log Out</a>
+        <a href="/displaypost/"><img src="{% static 'media/solarpic.png' %}" class="topnav-logo"></a>
+        <a href="/logout/" class="logout-button">Log Out</a>
     </div>
     
     <div style="margin-top: 90px;">
         
         <section id="contact">
-            <a href="maps.html" class="back-button"><img src="{% static 'media/arrow-left.png' %}" style="width: 20px; height: 15px;"> Go back</a>
+            <a href="/displaypost/" class="back-button"><img src="{% static 'media/arrow-left.png' %}" style="width: 20px; height: 15px;"> Go back</a>
 			<div class="section-content">
 				<h1 class="section-header">Please fill up the form</h1>
 			</div>
 			<div class="contact-section">
 			<div class="container">
-				<form action="maps.html" method="POST">
+				<form action="/displaypost/" method="POST">
 					<div class="col-md-6 form-container">
 			  			<div class="form-group">
 			  				<label for="filename">Filename</label>
@@ -36,7 +38,7 @@
 			  			 	<textarea  class="form-control" id="description" placeholder="Enter description"></textarea>
 			  			</div>
 			  			<div>
-
+							{% csrf_token %}
 			  				<input type="submit" class="btn btn-default submit" placeholder="Upload file"><i class="fa fa-paper-plane" aria-hidden="true"></i>
 			  			</div>
 			  		</div>

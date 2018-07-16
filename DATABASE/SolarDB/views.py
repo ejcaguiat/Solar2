@@ -54,7 +54,10 @@ def addpost(request):
 
 
 def logout(request):
+    print(request.POST)
     if 'logout' in request.POST:
         if 'user' in request.session:
             del request.session['user']
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect('/')
+    
+    return HttpResponseRedirect('/')

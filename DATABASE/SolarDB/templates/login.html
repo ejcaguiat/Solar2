@@ -99,11 +99,11 @@
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
                                                 <input type="hidden" name="register" value="true" required>
-<!--                                                {% csrf_token %}-->
+                                                {% csrf_token %}
 												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" style="color: white;">
                                                 <div class="row">
                                                     <div class="col">
-<!--
+
                                                         {% if reg_error %}
                                                             <div class="col"><div class="alert alert-danger"><b>Error!</b> {{ reg_error }}</div></div>
                                                         {% endif %}
@@ -112,7 +112,7 @@
                                                             <div class="col"><div class="alert alert-success"><b>Success!</b> {{ reg_success }}</div></div>
                                                         {% endif %}
                                                     </div>
--->
+
                                                 </div>
 											</div>
 										</div>

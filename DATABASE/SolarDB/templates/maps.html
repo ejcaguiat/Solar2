@@ -14,9 +14,13 @@
 
 <body>
     <div class="navbar" style="background-image: url({% static 'media/orange-bg.png' %});">
-        <a href="maps.html"><img src="{% static 'media/solarpic.png' %}" class="topnav-logo"></a>
+        <a href="#"><img src="{% static 'media/solarpic.png' %}" class="topnav-logo"></a>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Search" style="background-image: url({% static 'media/search.png' %});">
-        <a href="login.html" class="logout-button">Log Out</a>
+        <form action="/logout/" method="POST" role="form" style="float: right;">
+            <input type="hidden" name="logout" value="true" required>
+            {% csrf_token %}
+            <input type="submit" tabindex="4" class="logout-btn" value="Log Out">
+        </form>
     </div>
     
     <div>
@@ -26,7 +30,7 @@
                     <th class="head-file">Filename</th>
                     <th class="head-date">Date</th>
                     <th class="head-descrip">Description</th>
-                    <th><a href="maps_form.html" style="font-size: 15px;color: white;">Upload File<img src="{% static 'media/upload.png' %}" class="upload-icon"></a></th>
+                    <th><a href="/addpost/" style="font-size: 15px;color: white;">Upload File<img src="{% static 'media/upload.png' %}" class="upload-icon"></a></th>
                 </tr>
             </thead>
             <tbody>
