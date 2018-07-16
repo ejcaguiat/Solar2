@@ -27,7 +27,7 @@
 			</div>
 			<div class="contact-section">
 			<div class="container">
-				<form action="/displaypost/" method="POST">
+				<form action="#" method="POST">
 					<div class="col-md-6 form-container">
 			  			<div class="form-group">
 			  				<label for="filename">Filename</label>
@@ -39,6 +39,7 @@
 			  			</div>
 			  			<div>
 							{% csrf_token %}
+							<input type="hidden" name="addpost" value="true" required>
 			  				<input type="submit" class="btn btn-default submit" placeholder="Upload file"><i class="fa fa-paper-plane" aria-hidden="true"></i>
 			  			</div>
 			  		</div>

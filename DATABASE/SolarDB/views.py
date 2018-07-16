@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.sessions.models import Session
+from shutil import copyfile
+
 
 from .models import User
 from .models import Post
@@ -50,6 +52,12 @@ def displaypost(request):
 
 def addpost(request):
     context = {}
+
+    if 'addpost' in request.POST:
+        if 'myFile' in request.POST:
+
+
+
     return render(request, 'maps_form.html', context)
 
 
